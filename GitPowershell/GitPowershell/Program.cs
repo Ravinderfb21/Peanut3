@@ -14,22 +14,25 @@ namespace GitPowershell
         {
             Console.WriteLine("Hello world");
             Download();
-            Download1();
+           
             Console.ReadLine();
         }
         static void Download()
         {
-            Thread.Sleep(4000);
-            Console.WriteLine("Completed");
+            Network.Download();
         }
-        static void Download1()
-        {
 
-            Task Run() => { Thread.Sleep(3000);
-                Console.WriteLine("comletion 1");
-            };
+        class Network
+        {
+            static public Task Download() {
+                return Task.Run(() =>Thread.Sleep(3000));
+            }
         }
-            
+       
+           
         }
+
     }
-}
+
+    
+
