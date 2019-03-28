@@ -17,9 +17,9 @@ namespace GitPowershell
            
             Console.ReadLine();
         }
-        static void Download()
+        static async void Download()
         {
-            Network.Download();
+           await  Network.Download();
         }
 
         class Network
