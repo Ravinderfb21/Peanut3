@@ -7,13 +7,13 @@ using System.Threading;
 using System.Threading.Tasks;
 
 namespace GitPowershell
-{ 
+{
     class Program
     {
         static void Main(string[] args)
         {
             Console.WriteLine("Hello world");
-           Download();
+            Download();
             Download1();
             Console.ReadLine();
         }
@@ -22,9 +22,14 @@ namespace GitPowershell
             Thread.Sleep(4000);
             Console.WriteLine("Completed");
         }
-        static void Download1 ()
+        static void Download1()
         {
-            Console.WriteLine("comletion 1");
+
+            Task Run() => { Thread.Sleep(3000);
+                Console.WriteLine("comletion 1");
+            };
+        }
+            
         }
     }
 }
